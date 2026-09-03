@@ -10,3 +10,6 @@ class Solution:
         # return np.round(your_answer, 4)
         subtracted = z - max(z)
         return np.round(np.exp(subtracted)/np.sum(np.exp(subtracted)), 4)
+
+# time: O(n)
+# space: O(n)
