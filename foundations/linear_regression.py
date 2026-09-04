@@ -9,10 +9,16 @@ class Solution:
         y = np.dot(X, weights)
         return np.round(y, 5)
 
+# time: O(n*m)
+# space: O(n)
+
     def get_error(self, model_prediction: NDArray[np.float64], ground_truth: NDArray[np.float64]) -> float:
         # Compute mean squared error between predictions and ground truth
         # Round to 5 decimal places
         mse = (model_prediction - ground_truth)**2
         mse = np.sum(mse) / len(mse)
         return round(mse, 5)
-        
+
+# time: O(n)
+# space: O(n)
+
