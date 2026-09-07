@@ -19,3 +19,6 @@ class Solution:
             # z = np.clip(z , 1e-7, 1 - 1e-7)
             return round(1 / (1 + np.exp(-z)), 5)
 
+# time: O(n)
+# space: O(1)
+
