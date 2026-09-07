@@ -14,11 +14,12 @@ class Solution:
         z = np.dot(x, w) + b
 
         if activation == 'relu':
-            return round(max(0.0, z), 5)
-        if activation == 'sigmoid':
-            # z = np.clip(z , 1e-7, 1 - 1e-7)
-            return round(1 / (1 + np.exp(-z)), 5)
-
+            res = max(0.0, z)
+        elif activation == 'sigmoid':
+            res = 1 / (1 + np.exp(-z))
+        else: res = z
+        
+        return round(res, 5)
 # time: O(n)
 # space: O(1)
 
