@@ -27,3 +27,6 @@ class Solution:
         # Compute Mean Squared Error between prediction and target
         # Use torch.nn.functional.mse_loss(prediction, target)
         return torch.nn.functional.mse_loss(prediction, target)
+
+# time: O(n); n = num els across all tensors
+# space: O(n)
