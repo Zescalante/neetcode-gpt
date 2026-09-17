@@ -7,11 +7,9 @@ class Solution:
         # embeddings: (vocab_size, embed_dim) matrix
         # token_ids: 1D array of integer token IDs
         # Return the embedding vectors for the given token IDs
-        # return np.round(your_answer, 5)
-        print(embeddings)
-        print(token_ids)
-        print(embeddings[token_ids])
-        print(embeddings[token_ids].flatten())
         ans = embeddings[token_ids]
         return np.round(ans, 5)
+
+# time: O(n*d); n = number of els in token_ids, d = embedding dim
+# space: O(n*d)
         
