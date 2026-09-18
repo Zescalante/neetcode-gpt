@@ -19,5 +19,6 @@ class Solution:
         pe[:, 1::2] = np.cos(position / div_term)
 
         return np.round(pe, 5)
-
+# time: O(n*m)
+# space: O(n*m)
         
